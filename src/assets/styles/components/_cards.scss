@@ -1,0 +1,67 @@
+@use "../_variables" as variables;
+
+/* ==========================================================================
+   CARDS
+   Define the style of the cards: structure, shadows, borders, spacing and
+   visual behavior to display content in a clean and orderly manner.
+   ========================================================================== */
+
+/* Card wrapper */
+.uoc-home__card {
+  display: block;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+
+  /* Brand colours */
+  color: variables.$uoc-corporate;
+  text-decoration: none;
+
+  /* Hover and focus transitions */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    background-color: variables.$uoc-masterbrand;
+    color: variables.$uoc-corporate;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px variables.$uoc-masterbrand,
+      0 0 0 6px variables.$uoc-corporate;
+  }
+
+  &:visited {
+    color: variables.$uoc-corporate;
+  }
+
+  /* Card image */
+  &-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  /* Card title */
+  &-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Card body text */
+  &-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+    color: inherit;
+    text-decoration: none;
+  }
+}

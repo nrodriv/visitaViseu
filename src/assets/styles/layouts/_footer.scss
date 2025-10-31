@@ -1,0 +1,116 @@
+@use "../_variables" as variables;
+
+/* ==========================================================================
+   FOOTER COMPONENT
+   Define the footer style: layout, colors, typography, links, spacing and
+   responsive adaptation to maintain consistency with the overall design.
+   ========================================================================== */
+
+.uoc-footer {
+  background-color: variables.$uoc-corporate;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  /* .uoc-footer__inner
+  */
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: variables.$bp-desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      width: 100%;
+      padding-inline: 2rem;
+    }
+  }
+
+  /* .uoc-footer__logo-link
+  */
+  &__logo-link {
+    text-decoration: none;
+    line-height: 0; /* avoid stray line-height around <img> */
+  }
+
+  /* .uoc-footer__logo
+  */
+  &__logo {
+    width: 90px;
+    height: auto;
+    animation: uoc-footer-logo-blink 4s infinite ease-in-out;
+  }
+
+  @keyframes uoc-footer-logo-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  /* .uoc-footer__nav
+  */
+  &__nav {
+    text-align: center;
+
+    @media (min-width: variables.$bp-desktop) {
+      text-align: left;
+      margin-left: 2rem;
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  /* .uoc-footer__list
+  */
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+
+    @media (min-width: variables.$bp-desktop) {
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+  }
+
+  /* .uoc-footer__item
+  */
+  &__item {
+    @media (min-width: variables.$bp-desktop) {
+      padding: 0 1.5rem;
+      border-left: 1px solid rgba(255, 255, 255, 0.6);
+
+      &:first-child {
+        border-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  /* .uoc-footer__copy
+  */
+  &__copy {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+}

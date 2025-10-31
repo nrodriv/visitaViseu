@@ -1,20 +1,31 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
+/* ==========================================================================
+   CONTENTS 
+   1) Settings
+   2) Tools
+   3) Generic
+   4) Base
+   5) Objects
+   6) Vendors
+   7) Components
+   8) Layouts
+   9) Utilities 
+   ========================================================================== */
 
- /**
- * Import dependencies
- */
+/* 1) Settings -------------------------------------------------------------- */
+@use "variables" as *;
+
+/* 6) Vendors  --------------------------------------------- */
 @use "dependencies";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+/* 7) Components ----------------------------- */
+@use "components/buttons";
+@use "components/cards";
+@use "components/links";
 
- @use "layouts/home";
+/* 8) Layouts  ---- */
+@use "layouts/header";
+@use "layouts/home";
+@use "layouts/footer";
 
-/**
- * Do NOT include anything else in this file!
- */
+/* 9) Utilities  ------------- */
+@use "utilities/a11y";

@@ -1,0 +1,59 @@
+@use "../_variables" as variables;
+
+/* ==========================================================================
+   LINKS
+   Define link styles: colors, hover and focus states, underlining and visual
+   behavior consistent with the overall identity of the site.
+   ========================================================================== */
+
+.uoc-header__link,
+.uoc-footer__link {
+  /* Base link style (both header and footer) */
+  display: block;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+
+  position: relative;
+  border-radius: 4px;
+
+  transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease,
+    outline 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: variables.$uoc-masterbrand;
+    background-color: transparent;
+    outline: 3px solid variables.$uoc-masterbrand;
+    outline-offset: 2px;
+  }
+}
+
+/* Header-only underline animation on hover and focus */
+.uoc-header__link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+  margin: 0.25rem auto 0 auto;
+}
+
+.uoc-header__link:hover::after,
+.uoc-header__link:focus::after {
+  width: 100%;
+}
+
+/**
+ * Current page state in header
+ */
+.uoc-header__item--active > .uoc-header__link,
+.uoc-header__link[aria-current="page"] {
+  background-color: variables.$uoc-masterbrand;
+  color: variables.$uoc-corporate;
+  outline: none;
+}

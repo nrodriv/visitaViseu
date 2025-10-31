@@ -1,0 +1,107 @@
+@use "../_variables" as variables;
+
+/* ==========================================================================
+   HEADER COMPONENT
+   Define the header style: structure, alignment, colors, typography, navigation
+   and responsive behavior to maintain visual consistency with the site.
+   ========================================================================== */
+
+.uoc-header {
+  background-color: variables.$uoc-corporate;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+
+  /* .uoc-header__inner
+  */
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: variables.$bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  /* .uoc-header__brand
+  */
+  &__brand {
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @media (min-width: variables.$bp-tablet) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  /* .uoc-header__logo
+  */
+  &__logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    animation: uoc-header-logo-blink 4s infinite ease-in-out;
+  }
+
+  @keyframes uoc-header-logo-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  /* .uoc-header__title
+  */
+  &__title {
+    font-family: variables.$font-family-serif;
+    font-size: 1.8rem;
+    margin: 0;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  /* .uoc-header__subtitle
+  */
+  &__subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* .uoc-header__nav
+  */
+  &__nav {
+    width: 100%;
+    margin-top: 1.75rem;
+  }
+
+  /* .uoc-header__menu
+  */
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+
+    @media (min-width: variables.$bp-tablet) {
+      flex-direction: row;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 0;
+    }
+  }
+}

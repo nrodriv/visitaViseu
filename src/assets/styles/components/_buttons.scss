@@ -1,0 +1,52 @@
+@use "../_variables" as variables;
+
+/* ==========================================================================
+   BUTTONS
+   Define the visual style of buttons: sizes, colors, borders, hover states and
+   appearance consistent with the overall design of the site.
+   ========================================================================== */
+
+/* Wrapper around each button */
+.uoc-home__actions {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* button itself */
+.uoc-home__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: variables.$uoc-corporate;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease,
+    outline-color 0.2s ease;
+
+  /* Icon inside the button */
+  &-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  /* Hover and focus visual state */
+  &:hover,
+  &:focus {
+    background-color: variables.$uoc-masterbrand;
+    color: variables.$uoc-corporate;
+    text-decoration: none;
+  }
+
+  /* Focus ring for keyboard users */
+  &:focus-visible {
+    outline: 3px solid variables.$uoc-masterbrand;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+  }
+}

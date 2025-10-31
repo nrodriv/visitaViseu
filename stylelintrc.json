@@ -1,0 +1,65 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-selector-bem-pattern"
+  ],
+  "rules": {
+    "selector-class-pattern": [
+      "^uoc-[a-z0-9-]+(__[a-z0-9-]+)?(--[a-z0-9-]+)?$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Use BEM in this way: uoc-block__element--modifier"
+      }
+    ],
+
+    "max-nesting-depth": [
+      3,
+      {
+        "message": "Too much nesting, more than 3."
+      }
+    ],
+
+    "selector-max-id": [
+      0,
+      {
+        "message": "Don't style by #id. Instead, use classes."
+      }
+    ],
+
+    "comment-no-empty": [
+      true,
+      {
+        "message": "Remove empty comments."
+      }
+    ],
+
+    "block-no-empty": [
+      true,
+      {
+        "message": "Empty block."
+      }
+    ],
+
+    "no-duplicate-selectors": [
+      true,
+      {
+        "message": "Selector already defined."
+      }
+    ],
+
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "message": "Property duplicated."
+      }
+    ],
+
+    "selector-pseudo-element-colon-notation": [
+      "double",
+      {
+        "message": "Use ::before and ::after."
+      }
+    ]
+  }
+}

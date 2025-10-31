@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <title>Logo blanco detallado (200x200) - escudo + castillo</title>
+  <!-- Fondo transparente; todos los trazos/figuras en blanco -->
+  <defs>
+    <!-- Silueta del escudo para recortar el contenido interior -->
+    <clipPath id="clipShield" clipPathUnits="userSpaceOnUse">
+      <path d="M100,20
+               C60,20 40,40 40,70
+               C40,120 65,145 100,180
+               C135,145 160,120 160,70
+               C160,40 140,20 100,20 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Borde del escudo -->
+  <path d="M100,20
+           C60,20 40,40 40,70
+           C40,120 65,145 100,180
+           C135,145 160,120 160,70
+           C160,40 140,20 100,20 Z"
+        fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Contenido interno recortado al escudo -->
+  <g clip-path="url(#clipShield)" fill="#ffffff" fill-rule="evenodd">
+    <!-- Base del castillo (cuerpo principal) con puerta en arco y ventanas recortadas -->
+    <path d="
+      M70 145 H130 V95 H70 Z
+      M88 145 V128
+      A12 12 0 0 1 112 128
+      V145 Z
+      M86 112 H92 V130 H86 Z
+      M98 112 H104 V130 H98 Z
+      M110 112 H116 V130 H110 Z
+      M72 120 H128 V122 H72 Z
+      M72 132 H128 V134 H72 Z
+    "/>
+
+    <!-- Torre central superior con almenas y aspilleras recortadas -->
+    <path d="
+      M85 95 H115 V75 H85 Z
+      M86 75 H92 V67 H86 Z
+      M96 75 H102 V67 H96 Z
+      M106 75 H112 V67 H106 Z
+      M96 82 H102 V92 H96 Z
+    "/>
+
+    <!-- Almenas del cuerpo principal -->
+    <rect x="72" y="88" width="10" height="7"/>
+    <rect x="86" y="88" width="10" height="7"/>
+    <rect x="100" y="88" width="10" height="7"/>
+    <rect x="114" y="88" width="10" height="7"/>
+    <rect x="128" y="88" width="10" height="7"/>
+
+    <!-- Torres laterales con detalles -->
+    <path d="
+      M55 145 H75 V100 H55 Z
+      M57 100 H63 V92 H57 Z
+      M67 100 H73 V92 H67 Z
+      M63 112 H67 V132 H63 Z
+    "/>
+    <path d="
+      M125 145 H145 V100 H125 Z
+      M127 100 H133 V92 H127 Z
+      M137 100 H143 V92 H137 Z
+      M133 112 H137 V132 H133 Z
+    "/>
+
+    <!-- Base escalonada -->
+    <rect x="60" y="150" width="80" height="4"/>
+    <rect x="66" y="156" width="68" height="4"/>
+  </g>
+</svg>

@@ -1,27 +1,266 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Descubre Viseu: qué ver, dónde comer y dónde dormir en el corazón de Portugal."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>Descubre Viseu | UOC Project</title>
   </head>
+
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <!-- Skip link (accessibility) -->
+    <a class="uoc-skip-link" href="#main-content">Saltar al contenido</a>
+
+    <!-- Global header -->
+    <include src="./views/header.html"></include>
+
+    <!-- Main page content -->
+    <main class="uoc-home" id="main-content">
+      <div class="uoc-home__intro">
+        <p class="animate__animated animate__fadeInUp">
+          Proyecto de la asignatura
+          <strong>Herramientas HTML y CSS II</strong> — Universitat Oberta de
+          Catalunya.<br />
+          Sitio web informativo sobre la ciudad de Viseu, en el corazón de
+          Portugal.
+        </p>
+      </div>
+
+      <!-- Section places -->
+      <section
+        class="uoc-home__section"
+        id="quever"
+        aria-labelledby="quever-title"
+      >
+        <h2
+          id="quever-title"
+          class="uoc-home__section-title animate__animated animate__fadeInDown"
+        >
+          Qué ver y hacer en Viseu
+        </h2>
+
+        <div class="uoc-home__cards">
+          <!-- Card 1 -->
+          <a
+            class="uoc-home__card"
+            href="#museo-grao-vasco"
+            aria-labelledby="card-museo-title"
+            data-tilt
+          >
+            <img
+              class="uoc-home__card-image"
+              src="./assets/images/museo-grao-vasco.jpg?as=webp&width=600"
+              srcset="
+                ./assets/images/museo-grao-vasco.jpg?as=webp&width=600 600w,
+                ./assets/images/museo-grao-vasco.jpg?as=webp&width=900 900w
+              "
+              sizes="(min-width:1024px) 25vw, (min-width:768px) 45vw, 90vw"
+              alt="Museo Grão Vasco"
+              loading="lazy"
+              decoding="async"
+            />
+            <h3 class="uoc-home__card-title" id="card-museo-title">
+              Museo Grão Vasco
+            </h3>
+            <p class="uoc-home__card-text">
+              La ciudad cuna del pintor Vasco Fernandes alberga una colección
+              impresionante de arte sacro portugués en el Museo Grão Vasco.
+            </p>
+          </a>
+
+          <!-- Card 2 -->
+          <a
+            class="uoc-home__card"
+            href="#catedral-de-viseu"
+            aria-labelledby="card-catedral-title"
+            data-tilt
+          >
+            <img
+              class="uoc-home__card-image"
+              src="./assets/images/catedral-viseu.jpg?as=webp&width=600"
+              srcset="
+                ./assets/images/catedral-viseu.jpg?as=webp&width=600 600w,
+                ./assets/images/catedral-viseu.jpg?as=webp&width=900 900w
+              "
+              sizes="(min-width:1024px) 25vw, (min-width:768px) 45vw, 90vw"
+              alt="Catedral de Viseu"
+              loading="lazy"
+              decoding="async"
+            />
+            <h3 class="uoc-home__card-title" id="card-catedral-title">
+              Catedral de Viseu
+            </h3>
+            <p class="uoc-home__card-text">
+              Uno de los edificios más emblemáticos del centro histórico. Desde
+              su Atrio puedes explorar la Iglesia da Misericórdia y el Paseo dos
+              Cónegos.
+            </p>
+          </a>
+
+          <!-- Card 3 -->
+          <a
+            class="uoc-home__card"
+            href="#sierra-de-caramulo"
+            aria-labelledby="card-caramulo-title"
+            data-tilt
+          >
+            <img
+              class="uoc-home__card-image"
+              src="./assets/images/sierra-caramulo.jpg?as=webp&width=600"
+              srcset="
+                ./assets/images/sierra-caramulo.jpg?as=webp&width=600 600w,
+                ./assets/images/sierra-caramulo.jpg?as=webp&width=900 900w
+              "
+              sizes="(min-width:1024px) 25vw, (min-width:768px) 45vw, 90vw"
+              alt="Sierra de Caramulo"
+              loading="lazy"
+              decoding="async"
+            />
+            <h3 class="uoc-home__card-title" id="card-caramulo-title">
+              Sierra de Caramulo
+            </h3>
+            <p class="uoc-home__card-text">
+              Ideal para respirar aire puro, admirar el paisaje y disfrutar de
+              los espacios naturales del distrito de Viseu.
+            </p>
+          </a>
+
+          <!-- Card 4 -->
+          <a
+            class="uoc-home__card"
+            href="#parque-aquilino-ribeiro"
+            aria-labelledby="card-parque-title"
+            data-tilt
+          >
+            <img
+              class="uoc-home__card-image"
+              src="./assets/images/parque-aquilino-ribeiro.jpg?as=webp&width=600"
+              srcset="
+                ./assets/images/parque-aquilino-ribeiro.jpg?as=webp&width=600 600w,
+                ./assets/images/parque-aquilino-ribeiro.jpg?as=webp&width=900 900w
+              "
+              sizes="(min-width:1024px) 25vw, (min-width:768px) 45vw, 90vw"
+              alt="Parque Aquilino Ribeiro en Viseu"
+              loading="lazy"
+              decoding="async"
+            />
+            <h3 class="uoc-home__card-title" id="card-parque-title">
+              Parque Aquilino Ribeiro
+            </h3>
+            <p class="uoc-home__card-text">
+              Un pulmón verde en pleno centro de Viseu. Senderos, fuentes y
+              zonas de descanso que reflejan el espíritu de la “ciudad jardín de
+              Portugal”.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section food -->
+      <section
+        class="uoc-home__section"
+        id="comer"
+        aria-labelledby="comer-title"
+      >
+        <h2 id="comer-title" class="uoc-home__section-title">
+          Dónde comer en Viseu
+        </h2>
+        <div class="uoc-home__content">
+          <picture class="uoc-home__image">
+            <source
+              srcset="./assets/images/comer-viseu.jpg?as=webp&width=600"
+              type="image/webp"
+            />
+            <img
+              src="./assets/images/comer-viseu.jpg?width=600"
+              alt="Gastronomía de Viseu"
+              class="uoc-home__image-element"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <div class="uoc-home__text">
+            <p>
+              Viseu ofrece una experiencia deliciosa y auténtica. El embutido de
+              alheira o el bacalo en sus múltiples modalidades reflejan su
+              herencia tradicional.
+            </p>
+            <p>
+              No puedes dejar de probar el vino del Dão ni los pasteles típicos
+              de Viseu, perfectos para acompañar un café en las plazas del
+              centro histórico.
+            </p>
+
+            <div class="uoc-home__actions">
+              <a
+                class="uoc-home__btn"
+                href="#donde-comer"
+                aria-label="Descubre más sobre dónde comer en Viseu"
+              >
+                <i class="fas fa-eye uoc-home__btn-icon" aria-hidden="true"></i>
+                <span>Descubre más</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section stay -->
+      <section
+        class="uoc-home__section"
+        id="dormir"
+        aria-labelledby="dormir-title"
+      >
+        <h2 id="dormir-title" class="uoc-home__section-title">
+          Dónde dormir en Viseu
+        </h2>
+        <div class="uoc-home__content uoc-home__content--reverse">
+          <picture class="uoc-home__image">
+            <source
+              srcset="./assets/images/dormir-viseu.jpg?as=webp&width=600"
+              type="image/webp"
+            />
+            <img
+              src="./assets/images/dormir-viseu.jpg?width=600"
+              alt="Alojamientos en Viseu"
+              class="uoc-home__image-element"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <div class="uoc-home__text">
+            <p>
+              Viseu cuenta con una amplia oferta de alojamientos: desde hoteles
+              boutique en edificios históricos hasta modernas casas rurales.
+            </p>
+            <p>
+              La hospitalidad beirense garantiza una estancia tranquila, cómoda
+              y llena de encanto en el corazón de Portugal.
+            </p>
+
+            <div class="uoc-home__actions">
+              <a
+                class="uoc-home__btn"
+                href="#donde-dormir"
+                aria-label="Descubre más sobre dónde dormir en Viseu"
+              >
+                <i class="fas fa-eye uoc-home__btn-icon" aria-hidden="true"></i>
+                <span>Descubre más</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global footer -->
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

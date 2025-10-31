@@ -1,0 +1,61 @@
+@use "../_variables" as variables;
+
+/* ==========================================================================
+   ACCESSIBILITY UTILITIES
+   Define styles to improve accessibility: visible focus, contrast, keyboard
+   navigation and support for users with special needs.
+   ========================================================================== */
+
+/* Skip link shown to keyboard users to jump to main content */
+.uoc-skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    background-color: variables.$uoc-masterbrand;
+    color: variables.$uoc-corporate;
+    font-weight: 700;
+    border-radius: 4px;
+    z-index: 9999;
+  }
+}
+
+/* Content that should be available to screen readers but hidden visually */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Global visible focus ring for navigation with keyboard */
+:focus-visible {
+  outline: 3px solid variables.$uoc-masterbrand;
+  outline-offset: 2px;
+}
+
+/* Reduced motion users by turning off long animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate__animated {
+    animation: none !important;
+  }
+}
